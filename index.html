@@ -573,7 +573,7 @@
   </div>
 
   <div id="viewLocal">
-  <div class="tab-hint">Drop a Windows uninstall-registry CSV from one machine for offline analysis. Architecture-aware dedup and one-click silent-uninstall strings.</div>
+ <!-- <div class="tab-hint">Drop a Windows uninstall-registry CSV from one machine for offline analysis. Architecture-aware dedup and one-click silent-uninstall strings.</div> -->
   <div id="dashboard" style="display:none;">
     <div class="tiles">
       <div class="tile">
@@ -661,17 +661,19 @@
     </div>
   </div>
 
-  <!-- <div id="uploadPrompt" class="upload-prompt">
-    <div style="font-size: 32px; margin-bottom: 8px;">📦</div>
-    <div>Drop your Uninstall-Export.csv to get started</div>
+  <div id="uploadPrompt" class="upload-prompt">
+   <!--  <div style="font-size: 32px; margin-bottom: 8px;">📦</div> -->
+  <!-- <div>Drop your Uninstall-Export.csv to get started</div> -->
     <input type="file" id="csvFile" accept=".csv">
-    <label for="csvFile">Select CSV</label>
+   <!-- <label for="csvFile">Select CSV</label> -->
 
-    <div class="ps-helper">
+  <!--  <div class="ps-helper">
       <div class="ps-helper-head">
-        <span>Need a CSV? Run this PowerShell on a target machine:</span>
+        <span>Need a CSV? Run this PowerShell on a target machine:</span> 
         <button id="copyPs" class="btn btn-ghost" style="font-size:11px; padding:2px 10px;">Copy</button>
       </div>
+	  
+	  
 <pre id="psSnippet">$paths = @(
   'HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\*',
   'HKLM:\SOFTWARE\WOW6432Node\Microsoft\Windows\CurrentVersion\Uninstall\*',
@@ -684,8 +686,8 @@ Get-ItemProperty -Path $paths -ErrorAction SilentlyContinue |
                 UninstallString, QuietUninstallString, SystemComponent,
                 PSChildName, @{n='RegistryPath';e={$_.PSPath -replace 'Microsoft.PowerShell.Core\\Registry::',''}} |
   Export-Csv -Path "$desktop\Uninstall-Export.csv" -NoTypeInformation -Encoding UTF8</pre>
-    </div>
-  </div> -->
+    </div> -->
+  </div> 
   </div><!-- /viewLocal -->
 
   <div id="viewIntune" style="display:none;">
